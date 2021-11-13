@@ -20,4 +20,3 @@ for i in ALL_MODULES:
         module_names += i
     else:
         module_names += i+", "
-LOGS.info("Loaded Modules: %s", module_names)
