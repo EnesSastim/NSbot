@@ -1,0 +1,15 @@
+config.env
+__pycache__/*
+brains.check
+learning-data-root.check
+nsbot.db
+nsbot.session*
+nsbot/__pycache__/*
+nsbot/modules/__pycache__/*
+nsbot/*/__pycache__/*
+.progress
+.vscode/*
+.idea/*
+*secret*
+error.log
+bin/*

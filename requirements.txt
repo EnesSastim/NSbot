@@ -1,0 +1,13 @@
+asyncssh
+bs4
+lxml
+pylast
+python-dotenv
+requests
+humanize
+# Pyrogram Dependecies
+pyrogram
+tgcrypto
+pillow
+# aiohttp
+aiohttp[speedups]
