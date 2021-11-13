@@ -1,5 +1,6 @@
 asyncssh
 bs4
+cowpy
 lxml
 pylast
 python-dotenv
