@@ -1,7 +1,7 @@
 from pyrogram import Client
 #from pyrogram.errors import BadRequest, Forbidden, FloodWait, RPCError
 from dotenv import load_dotenv
-from logging import DEBUG, INFO, basicConfig, getLogger
+from logging import DEBUG, INFO, WARNING, basicConfig, getLogger
 
 import os
 import sys
@@ -33,6 +33,24 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN") or None
 if not BOT_TOKEN:
     LOGS.error("Bot Token is not set! Check your config.env!")
     sys.exit(1)
+
+OWNER_ID = os.environ.get("OWNER_ID")
+try:
+    OWNER_ID = int(OWNER_ID)
+except:
+    LOGS.warning("OWNER_ID is not set")
+    
+SUDO_USERS = os.environ.get("SUDO_USERS")
+sudolist = []
+sudos = SUDO_USERS.strip("[]")
+for i in sudos.split(","):
+    try:
+        i = int(i)
+    except:
+        break
+    sudolist.append(i)
+SUDO_USERS = sudolist
+
 
 bot = Client(
     "nsbot",
